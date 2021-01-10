@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tts-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tts
+  template:
+    metadata:
+      labels:
+        app: tts
+    spec:
+      containers:
+        - name: tts
+          image: gcr.io/ttsgrpc/tts:final
+          ports:
+            - containerPort: 8080

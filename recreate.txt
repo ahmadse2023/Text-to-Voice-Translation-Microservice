@@ -1,0 +1,11 @@
+1) Create a GKE cluster
+2) gcloud config set account@gmail.com
+3) gcloud config set project ${project_id}
+4) gcloud config set compute/zone ${zone}
+5) gcloud config set compute/region ${region}
+6) make build
+7) make push
+8) gcloud container clusters get-credentials ${cluster_name}
+9) kubectl create -f deployment.yaml
+10) kubectl create -f service.yaml
+11) run client
